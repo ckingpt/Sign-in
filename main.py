@@ -21,7 +21,7 @@ def run_schedule():
 # 背景執行自動重置
 threading.Thread(target=run_schedule, daemon=True).start()
 
-@app.route("/sign")
+@app.route("/簽到")
 def sign():
     username = request.args.get("user")
     today = datetime.now().strftime("%Y-%m-%d")
@@ -39,3 +39,4 @@ def sign():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
+ㄋ
